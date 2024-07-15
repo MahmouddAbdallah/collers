@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+.left-angled-triangle {
+  position: relative;
+}
+
+.left-angled-triangle::before {
+  content: '';
+  position: absolute;
+  width: 100%; 
+  height: 100%; 
+  z-index: 0;
+  clip-path: polygon(100% 0%, 0% 100%, 100% 100% );
+}
+.p-container{
+  @apply px-5 md:px-10 lg:px-16 xl:px-24
+}
+
+.right-to-left{
+  display: flex;
+  animation: right-to-left-aim .5s forwards;
+}
+@keyframes right-to-left-aim{
+  0%{
+      transform: translateX(100%);
+      opacity: 0%;
+  }
+  100%{
+      transform: translateX(0px);
+      opacity: 100%;
+  }
+}
+.left-to-right{
+  display: flex;
+  animation: left-to-right-aim .5s forwards;
+}
+
+@keyframes left-to-right-aim{
+  0%{
+      transform: translateX(0px);
+      opacity: 100%;
+  }
+  100%{
+      transform: translateX(100%);
+      opacity: 0%;
+  }
+}
+
+.hero-bounce {
+  animation: bounce 4s  ease-in-out forwards ;
+}
+@keyframes bounce {
+  0%{
+    transform: translateY(-25px);
+  }
+  25%{
+    transform: translateY(25px);
+  }
+  50%{
+    transform: translateY(-25px);
+  }
+  75%{
+    transform: translateY(25px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
