@@ -35,21 +35,21 @@ const ShoesCollected = () => {
             if (element.textContent == goal) {
                 clearInterval(count);
             }
-        }, 3000 / goal);
+        }, 6000 / goal);
     };
     return (
-        <section className="bg-amber-900 p-container py-20 relative flex justify-center items-center">
+        <section className="bg-amber-900 p-container h-svh lg:h-full py-20 relative flex justify-center items-center">
             <div className=" px-5 md:px-10 lg:px-16 xl:px-24">
                 <img className=" object-contain" src="../images/chart.png" alt="" />
             </div>
             <div className="absolute w-full h-full ">
                 <div className="p-container py-20">
-                    <div className="w-60">
-                        <div className="w-60 p-1 bg-white rounded-xl">
+                    <div className="w-44 lg:w-60">
+                        <div className="w-44 lg:w-60 p-1 bg-white rounded-xl">
                             <img className="rounded-xl" src="../images/shoe-5.jpg" alt="" />
                         </div>
                         <div className="px-2">
-                            <div className=" bg-[#E2E8F0] pt-4 -mt-3 px-3 rounded-b-md pb-2">
+                            <div className=" bg-[#E2E8F0] pt-4 -mt-3 px-3 rounded-b-md pb-2 text-xs lg:text-sm">
                                 Emma Simpson collected one pair of Cool Shoes.
                             </div>
                         </div>
